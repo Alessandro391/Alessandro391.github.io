@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  color: #0f172a;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reset dei margini di default sui titoli */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+/* Blocco definitivo delle icone LastPass e auto-fill */
+[data-lpignore="true"],
+div[data-lastpass-icon-root],
+div[data-lastpass-root] {
+  background-image: none !important;
+}
+
+div[data-lastpass-icon-root],
+div[data-lastpass-root] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+input::-webkit-credentials-auto-fill-button,
+input::-ms-reveal {
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
+}
